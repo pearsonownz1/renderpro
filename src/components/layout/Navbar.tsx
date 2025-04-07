@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Camera } from "lucide-react"; // Added Camera icon
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
-const Navbar = ({ logo = "ArchViz Studio" }) => {
+const Navbar = () => { // Removed logo prop
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,7 +31,8 @@ const Navbar = ({ logo = "ArchViz Studio" }) => {
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold tracking-tight">{logo}</span>
+          <Camera className="h-6 w-6" /> {/* Added Camera icon */}
+          <span className="text-xl font-bold tracking-tight">RenderPro</span> {/* Changed text */}
         </Link>
 
         {/* Desktop Navigation */}
