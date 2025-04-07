@@ -19,8 +19,8 @@ const requestBodySchema = z.object({
 // Define the target email addresses
 const TO_EMAILS = ['staffan@gcs.org', 'guy@gcs.org'];
 // Define the sender email address (Must be a verified domain in Resend)
-// Using a default placeholder reflecting the user's domain - Vercel env var takes precedence
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'noreply@mail.rendersnap.co';
+// Define the sender email address (Must be a verified domain in Resend)
+const FROM_EMAIL = 'noreply@mail.rendersnap.co';
 
 export default async function handler(
   req: VercelRequest,
