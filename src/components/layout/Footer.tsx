@@ -31,7 +31,7 @@ const Footer = ({ className = "" }: FooterProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">ArchViz Studio</h3>
+            <h3 className="text-xl font-bold mb-4">RenderSnap</h3>
             <p className="text-slate-300 mb-4">
               Premium 3D architectural visualization services for architects,
               real estate developers, and interior designers.
@@ -134,10 +134,10 @@ const Footer = ({ className = "" }: FooterProps) => {
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-slate-400" />
                 <a
-                  href="mailto:info@archvizstudio.com"
+                  href="mailto:info@rendersnap.com"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  info@archvizstudio.com
+                  info@rendersnap.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -175,7 +175,7 @@ const Footer = ({ className = "" }: FooterProps) => {
 
         <div className="border-t border-slate-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm mb-4 md:mb-0">
-            © {currentYear} ArchViz Studio. All rights reserved.
+            © {currentYear} RenderSnap. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link

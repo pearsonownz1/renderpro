@@ -32,7 +32,7 @@ const Navbar = () => { // Removed logo prop
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <Camera className="h-6 w-6" /> {/* Added Camera icon */}
-          <span className="text-xl font-bold tracking-tight">RenderPro</span> {/* Changed text */}
+          <span className="text-xl font-bold tracking-tight">RenderSnap</span> {/* Changed text */}
         </Link>
 
         {/* Desktop Navigation */}
