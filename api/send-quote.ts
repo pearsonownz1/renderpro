@@ -74,8 +74,14 @@ export default async function handler(
 
     // Handle Resend API errors
     if (error) {
-      console.error('Resend Error:', error);
-      return res.status(500).json({ message: 'Error sending email via Resend.', details: error.message });
+      // Log the detailed error object from Resend
+      console.error('Detailed Resend Error:', JSON.stringify(error, null, 2));
+      return res.status(500).json({
+        message: 'Error sending email via Resend.',
+        // Provide more context if available in the error object
+        details: error.message || 'Unknown Resend error',
+        resendErrorName: error.name, // e.g., 'missing_required_fields'
+      });
     }
 
     // Success response
