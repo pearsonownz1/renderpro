@@ -5,6 +5,7 @@ const GetAQuotePage = lazy(() => import("./pages/GetAQuote")); // Lazy load the 
 const ServicesPage = lazy(() => import("./pages/Services"));
 const PortfolioPage = lazy(() => import("./pages/Portfolio"));
 const HowItWorksPage = lazy(() => import("./pages/HowItWorks"));
+const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicy"));
 import routes from "tempo-routes";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/get-a-quote" element={<GetAQuotePage />} /> {/* Added route */}
         </Routes>
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
