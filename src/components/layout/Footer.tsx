@@ -129,7 +129,7 @@ const Footer = ({ className = "" }: FooterProps) => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-slate-400" />
-                <span className="text-slate-300">+1 (555) 123-4567</span>
+                <span className="text-slate-300">210-379-4858</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-slate-400" />
@@ -143,11 +143,9 @@ const Footer = ({ className = "" }: FooterProps) => {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-slate-400" />
                 <span className="text-slate-300">
-                  123 Rendering Street
+                  104 Wall St
                   <br />
-                  Suite 456
-                  <br />
-                  New York, NY 10001
+                  Bend, OR 97702
                 </span>
               </li>
             </ul>
