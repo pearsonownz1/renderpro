@@ -15,9 +15,7 @@ const Home = () => {
   return (
     <div className="bg-white min-h-screen">
       <Navbar />
-      <main className="pt-20">
-        {" "}
-        {/* Add padding-top to account for fixed navbar */}
+      <main> {/* Removed pt-20 */}
         <HeroSection />
         <ServicesOverview />
         <BenefitsSection />
