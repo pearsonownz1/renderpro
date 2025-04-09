@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ExternalLink } from "lucide-react";
@@ -118,9 +119,11 @@ const PortfolioPreview = ({
         </div>
 
         <div className="mt-12 text-center">
-          <Button className="group" size="lg">
-            View Full Portfolio
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          <Button asChild className="group" size="lg">
+            <Link to="/portfolio"> {/* Add Link component */}
+              View Full Portfolio
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
         </div>
       </div>

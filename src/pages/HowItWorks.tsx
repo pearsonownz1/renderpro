@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { FileText, ScanSearch, PencilRuler, Image, CheckSquare, Send } from 'lucide-react'; // Icons for steps
 
@@ -44,6 +45,10 @@ const processSteps = [
 const HowItWorks: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-16">
+      <Helmet>
+        <title>How It Works | RenderPro 3D Rendering Process</title>
+        <meta name="description" content="Learn about RenderPro's simple, step-by-step process for creating stunning 3D architectural visualizations, from consultation to final delivery." />
+      </Helmet>
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">How It Works</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { CheckCircle } from 'lucide-react'; // Using lucide-react icons
 
@@ -52,6 +53,10 @@ const services = [
 const Services: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-16">
+      <Helmet>
+        <title>Our Services | RenderPro 3D Visualization</title>
+        <meta name="description" content="Explore RenderPro's comprehensive 3D rendering services, including exterior/interior visualizations, floor plans, virtual tours, and animations." />
+      </Helmet>
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

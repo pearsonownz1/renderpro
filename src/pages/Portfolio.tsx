@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -51,6 +52,10 @@ const portfolioItems = [
 const Portfolio: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-16">
+      <Helmet>
+        <title>Portfolio | RenderPro 3D Visualization Projects</title>
+        <meta name="description" content="Browse RenderPro's portfolio of high-quality 3D architectural renderings, including interior and exterior visualizations." />
+      </Helmet>
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Portfolio</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

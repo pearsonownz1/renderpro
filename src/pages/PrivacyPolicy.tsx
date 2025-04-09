@@ -1,12 +1,17 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 
 const PrivacyPolicy: React.FC = () => {
-  const companyName = "RenderSnap";
+  const companyName = "RenderSnap"; // Note: Text uses RenderSnap, title/desc use RenderPro
   const contactEmail = "info@rendersnap.com";
   const effectiveDate = "April 7, 2025"; // Update as needed
 
   return (
     <div className="container mx-auto px-4 py-16">
+      <Helmet>
+        <title>Privacy Policy | RenderPro</title>
+        <meta name="description" content="Read the RenderPro privacy policy to understand how we collect, use, and protect your personal information when you use our website and services." />
+      </Helmet>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">Privacy Policy</h1>
         <p className="text-muted-foreground text-center mb-8">Effective Date: {effectiveDate}</p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
@@ -92,6 +93,10 @@ const GetAQuotePage = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Get a Quote | RenderPro 3D Rendering Services</title>
+        <meta name="description" content="Request a free, personalized quote for your 3D rendering project from RenderPro. Fill out our form with your project details." />
+      </Helmet>
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-12 md:py-20">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
