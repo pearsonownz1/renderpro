@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -8,7 +9,7 @@ interface HeroSectionProps {
   title?: string;
   description?: string;
   ctaText?: string;
-  onCtaClick?: () => void;
+  // Removed onCtaClick prop
 }
 
 const HeroSection = ({
@@ -20,7 +21,7 @@ const HeroSection = ({
   title = "Stunning Architectural Visualizations",
   description = "Transform your architectural designs into photorealistic 3D renderings that captivate clients and bring your vision to life.",
   ctaText = "Get a Quote",
-  onCtaClick = () => console.log("CTA clicked"),
+  // Removed onCtaClick default value
 }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -86,13 +87,17 @@ const HeroSection = ({
           {title}
         </h1>
         <p className="text-lg md:text-xl mb-8 max-w-2xl">{description}</p>
-        <Button
-          onClick={onCtaClick}
-          size="lg"
-          className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 h-auto"
-        >
-          {ctaText} <ArrowRight className="ml-2" size={20} />
-        </Button>
+        <Link to="/get-a-quote"> {/* Wrap Button with Link */}
+          <Button
+            asChild // Add asChild prop
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 h-auto"
+          >
+            <span> {/* Wrap content in span or similar for Link */}
+              {ctaText} <ArrowRight className="ml-2" size={20} />
+            </span>
+          </Button>
+        </Link>
       </div>
 
       {/* Slide Indicators */}

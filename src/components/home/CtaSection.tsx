@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -48,10 +49,10 @@ const CtaSection = ({
             className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-6 h-auto text-lg rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
             asChild
           >
-            <a href={buttonLink} className="inline-flex items-center gap-2">
+            <Link to={buttonLink} className="inline-flex items-center gap-2"> {/* Use Link */}
               {buttonText}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
